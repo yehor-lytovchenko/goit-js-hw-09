@@ -1,0 +1,2 @@
+import"./assets/styles-BY5PF6Tx.js";const m=document.querySelector(".feedback-form");function o(e){e.preventDefault();const{email:t,message:r}=e.currentTarget.elements;if(!t.value.trim()||!r.value.trim())return alert("Fill please all fields");const l={email:t.value.trim(),message:r.value.trim()},a=JSON.stringify(l);localStorage.setItem("feedback-form-state",a),console.log(JSON.parse(a)),e.currentTarget.reset()}m.addEventListener("submit",o);
+//# sourceMappingURL=2-form.js.map

@@ -6,10 +6,15 @@ let formData = {
 };
 
 function renderPage(e) {
-  const { email, message } = getDataFromLocalStorage('feedback-form-state');
+  const savedData = getDataFromLocalStorage('feedback-form-state');
 
-  formEl.elements.email.value = email || '';
-  formEl.elements.message.value = message || '';
+  if (!savedData) return;
+
+  formData.email = savedData.email;
+  formData.message = savedData.message;
+
+  formEl.elements.email.value = formData.email;
+  formEl.elements.message.value = formData.message;
 }
 
 function onSubmit(e) {

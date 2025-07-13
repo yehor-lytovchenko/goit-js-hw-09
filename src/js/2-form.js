@@ -6,8 +6,7 @@ let formData = {
 };
 
 function renderPage(e) {
-  const { email, message } =
-    getDataFromLocalStorage('feedback-form-state') || {};
+  const { email, message } = getDataFromLocalStorage('feedback-form-state');
 
   formEl.elements.email.value = email || '';
   formEl.elements.message.value = message || '';
